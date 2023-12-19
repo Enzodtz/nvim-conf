@@ -5,6 +5,13 @@ local plugins = {
       ensure_installed = {
         "gopls",
         "clangd",
+        "lua-language-server",
+
+        -- python
+        "pyright",
+        "mypy",
+        "ruff",
+        "black"
       },
     },
   },
@@ -45,6 +52,13 @@ local plugins = {
     "nvim-tree/nvim-tree.lua",
     cmd = { "NvimTreeToggle", "NvimTreeFocus", "NvimTreeRefresh" },
     lazy = false
+  },
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    ft = {"python"},
+    opts = function()
+      return require "custom.configs.null-ls"
+    end,
   },
 }
 return plugins
