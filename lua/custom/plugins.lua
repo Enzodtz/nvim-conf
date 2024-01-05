@@ -44,7 +44,10 @@ local plugins = {
         "gomod",
 
         -- low level
-        "c"
+        "c",
+
+        -- infra
+        "terraform"
       }
     }
   },
