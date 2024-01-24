@@ -1,3 +1,5 @@
+require "custom.library.concat_array"
+
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local null_ls = require('null-ls')
 
@@ -6,14 +8,20 @@ local opts = {
     null_ls.builtins.formatting.black,
     null_ls.builtins.diagnostics.mypy.with({
       extra_args = function()
+        local default_args = { "--python-version=3.11" }
+
         local Path = require "plenary.path"
         local venv = Path:new((vim.fn.getcwd():gsub("/", Path.path.sep)), ".venv")
+
         if venv:joinpath("bin"):is_dir() then
-          venv = tostring(venv:joinpath("bin", "python"))
-        else
+          venv = tostring(venv:joinpath("bin", "python3.11"))
+        elseif venv:joinpath("Scripts"):is_dir() then
           venv = tostring(venv:joinpath("Scripts", "python.exe"))
+        else
+          return default_args
         end
-          return { "--python-executable", venv }
+
+        return ConcatArray(default_args, { "--python-executable", venv })
       end,
     }),
     null_ls.builtins.diagnostics.ruff,
