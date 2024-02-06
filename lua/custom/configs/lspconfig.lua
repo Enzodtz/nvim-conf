@@ -31,4 +31,9 @@ lspconfig.pyright.setup {
   capabilities = capabilities,
 }
 
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)

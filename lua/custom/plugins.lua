@@ -11,7 +11,10 @@ local plugins = {
         "pyright",
         "mypy",
         "ruff",
-        "black"
+        "black",
+
+        -- typescript
+        "typescript-language-server",
       },
     },
   },
