@@ -4,7 +4,6 @@ local plugins = {
     opts = {
       ensure_installed = {
         "gopls",
-        "clangd",
         "lua-language-server",
 
         -- python
@@ -15,6 +14,10 @@ local plugins = {
 
         -- typescript
         "typescript-language-server",
+
+        -- c
+        "clangd",
+        "clang-format"
       },
     },
   },
@@ -61,7 +64,8 @@ local plugins = {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = {"python"},
+    event = "VeryLazy",
+    ft = {"python", "c", "h"},
     opts = function()
       return require "custom.configs.null-ls"
     end,
