@@ -36,4 +36,10 @@ lspconfig.tsserver.setup {
   capabilities = capabilities,
 }
 
+lspconfig.texlab.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)

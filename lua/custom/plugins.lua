@@ -3,8 +3,11 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "gopls",
+        -- lua
         "lua-language-server",
+
+        -- go
+        "gopls",
 
         -- python
         "pyright",
@@ -17,7 +20,11 @@ local plugins = {
 
         -- c
         "clangd",
-        "clang-format"
+        "clang-format",
+
+        -- latex
+        "texlab",
+        "latexindent"
       },
     },
   },
@@ -53,7 +60,10 @@ local plugins = {
         "c",
 
         -- infra
-        "terraform"
+        "terraform",
+
+        -- others
+        "latex"
       }
     }
   },

@@ -18,7 +18,7 @@ local opts = {
         local venv = Path:new((vim.fn.getcwd():gsub("/", Path.path.sep)), ".venv")
 
         if venv:joinpath("bin"):is_dir() then
-          venv = tostring(venv:joinpath("bin", "python3.11"))
+          venv = tostring(venv:joinpath("bin", "python3"))
         elseif venv:joinpath("Scripts"):is_dir() then
           venv = tostring(venv:joinpath("Scripts", "python.exe"))
         else
@@ -29,6 +29,7 @@ local opts = {
       end,
     }),
     null_ls.builtins.diagnostics.ruff,
+    null_ls.builtins.formatting.latexindent,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
