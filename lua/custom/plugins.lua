@@ -61,11 +61,12 @@ local plugins = {
 
         -- infra
         "terraform",
+        "hcl",
 
         -- others
         "latex"
       }
-    }
+    },
   },
   {
     "nvim-tree/nvim-tree.lua",
@@ -80,6 +81,23 @@ local plugins = {
       return require "custom.configs.null-ls"
     end,
   },
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    config = function()
+      require('ts_context_commentstring').setup {
+        enable_autocmd = false,
+      }
+    end,
+  },
+  {
+    "numToStr/Comment.nvim",
+    dependencies = "JoosepAlviste/nvim-ts-context-commentstring",
+    opts = function ()
+      return {
+        pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook()
+      }
+    end
+  }
 }
 
 return plugins
