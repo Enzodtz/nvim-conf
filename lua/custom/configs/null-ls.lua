@@ -1,10 +1,10 @@
 require "custom.library.concat_array"
+require "custom.library.sys_is_wsl"
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local null_ls = require('null-ls')
 
-local opts = {
-  sources = {
+local sources = {
     -- c
     null_ls.builtins.formatting.clang_format,
 
@@ -29,8 +29,27 @@ local opts = {
       end,
     }),
     null_ls.builtins.diagnostics.ruff,
-    null_ls.builtins.formatting.latexindent,
-  },
+  }
+
+-- add latex source
+if(SysIsWSL()) then
+  local customLatexIndent = {
+      method = null_ls.methods.FORMATTING,
+      filetypes = { "tex" },
+      generator = null_ls.formatter({
+          command = "latexindent.exe",
+          args = { },
+          to_stdin = true,
+          from_stderr = true,
+      }),
+  }
+  null_ls.register(customLatexIndent)
+else
+  table.insert(sources, null_ls.builtins.formatting.latexindent)
+end
+
+local opts = {
+  sources = sources,
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
       vim.api.nvim_clear_autocmds({
