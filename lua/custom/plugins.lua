@@ -55,6 +55,7 @@ local plugins = {
         "python",
         "go",
         "gomod",
+        "c_sharp",
 
         -- low level
         "c",
