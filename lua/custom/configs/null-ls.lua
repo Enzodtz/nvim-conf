@@ -6,7 +6,12 @@ local null_ls = require('null-ls')
 
 local sources = {
     -- c
-    null_ls.builtins.formatting.clang_format,
+    null_ls.builtins.formatting.clang_format.with{
+      filetypes = { "c" }
+    },
+
+    -- c#
+    null_ls.builtins.formatting.csharpier,
 
     -- python
     null_ls.builtins.formatting.black,

@@ -24,6 +24,7 @@ local plugins = {
 
         -- c#
         "omnisharp",
+        "csharpier",
 
         -- latex
         "texlab",
