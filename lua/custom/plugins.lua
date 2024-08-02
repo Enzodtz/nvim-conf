@@ -22,6 +22,9 @@ local plugins = {
         "clangd",
         "clang-format",
 
+        -- c#
+        "omnisharp",
+
         -- latex
         "texlab",
         "latexindent"
@@ -98,6 +101,9 @@ local plugins = {
         pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook()
       }
     end
+  },
+  {
+    "Hoffs/omnisharp-extended-lsp.nvim"
   }
 }
 
