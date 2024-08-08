@@ -1,5 +1,6 @@
 require "custom.library.concat_array"
 require "custom.library.sys_is_wsl"
+local Path = require "plenary.path"
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local null_ls = require('null-ls')
@@ -17,9 +18,11 @@ local sources = {
     null_ls.builtins.formatting.black,
     null_ls.builtins.diagnostics.mypy.with({
       extra_args = function()
-        local default_args = { "--python-version=3.11" }
+        local default_args = { "--python-version=3.12" }
 
-        local Path = require "plenary.path"
+        local configs_path = Path:new(vim.fn.fnamemodify(debug.getinfo(1).source:sub(2), ":h"))
+        default_args = ConcatArray(default_args, {"--config-file", configs_path:joinpath("mypy.ini")})
+
         local venv = Path:new((vim.fn.getcwd():gsub("/", Path.path.sep)), ".venv")
 
         if venv:joinpath("bin"):is_dir() then

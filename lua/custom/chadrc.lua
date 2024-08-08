@@ -23,6 +23,6 @@ opt.foldenable = false
     }
   }
 }
- M.ui = {theme = 'oxocarbon'}
+ M.ui = {theme = 'radium'}
  M.plugins = "custom.plugins"
  return M
