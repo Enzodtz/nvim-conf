@@ -16,13 +16,13 @@ opt.foldenable = false
     ["utils"] = {
       n = {
         ["<A-m>"] = {
-          ":%s/\r$<CR>",
+          ":%s/\\r//g<CR>",
           "Remove ^m characters from buffer"
         }
       }
     }
   }
 }
- M.ui = {theme = 'oxocarbon'}
+ M.ui = {theme = 'catppuccin'}
  M.plugins = "custom.plugins"
  return M
