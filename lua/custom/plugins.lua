@@ -28,7 +28,10 @@ local plugins = {
 
         -- latex
         "texlab",
-        "latexindent"
+        "latexindent",
+
+        -- js, html etc
+        "prettier"
       },
     },
   },

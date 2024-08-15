@@ -37,6 +37,9 @@ local sources = {
       end,
     }),
     null_ls.builtins.diagnostics.ruff,
+
+    -- html, js, ts etc
+    null_ls.builtins.formatting.prettier
   }
 
 -- add latex source
