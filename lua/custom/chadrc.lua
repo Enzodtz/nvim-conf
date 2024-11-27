@@ -10,6 +10,12 @@ opt.fillchars="fold: "
 -- opt.foldtext = 'lua.vim.treeesitter.foldtext()'
 opt.foldenable = false
 
+-- Treat axaml as xml
+vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+  pattern = "*.axaml",
+  command = "set filetype=xml"
+})
+
 ---@type ChadrcConfig 
  local M = {
   mappings = {
@@ -23,6 +29,6 @@ opt.foldenable = false
     }
   }
 }
- M.ui = {theme = 'radium'}
+ M.ui = {theme = 'catppuccin'}
  M.plugins = "custom.plugins"
  return M
