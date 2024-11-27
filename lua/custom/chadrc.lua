@@ -22,7 +22,7 @@ vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
     ["utils"] = {
       n = {
         ["<A-m>"] = {
-          ":%s/\r$<CR>",
+          ":%s/\\r//g<CR>",
           "Remove ^m characters from buffer"
         }
       }
