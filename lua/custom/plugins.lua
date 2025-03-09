@@ -31,7 +31,9 @@ local plugins = {
         "latexindent",
 
         -- js, html etc
-        "prettier"
+        "prettier",
+        "css-lsp",
+        "html-lsp"
       },
     },
   },
