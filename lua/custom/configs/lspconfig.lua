@@ -64,5 +64,14 @@ lspconfig.omnisharp.setup {
   },
 }
 
+lspconfig.cssls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+lspconfig.html.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
 
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)

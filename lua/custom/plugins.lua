@@ -33,7 +33,9 @@ local plugins = {
 
         -- js, html etc
         "prettier",
-        "emmet-language-server"
+        "emmet-language-server",
+        "css-lsp",
+        "html-lsp"
       },
     },
   },
