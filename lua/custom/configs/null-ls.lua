@@ -12,7 +12,7 @@ local sources = {
     },
 
     -- c#
-    null_ls.builtins.formatting.csharpier,
+    -- null_ls.builtins.formatting.csharpier,
 
     -- python
     null_ls.builtins.formatting.black,

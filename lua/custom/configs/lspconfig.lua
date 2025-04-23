@@ -26,7 +26,12 @@ lspconfig.clangd.setup {
   capabilities = capabilities,
 }
 
-lspconfig.pyright.setup {
+-- lspconfig.pyright.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- }
+--
+lspconfig.basedpyright.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
@@ -37,6 +42,11 @@ lspconfig.tsserver.setup {
 }
 
 lspconfig.texlab.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+lspconfig.emmet_language_server.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }

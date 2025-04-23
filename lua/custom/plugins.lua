@@ -11,6 +11,7 @@ local plugins = {
 
         -- python
         "pyright",
+        "basedpyright",
         "mypy",
         "ruff",
         "black",
@@ -31,7 +32,8 @@ local plugins = {
         "latexindent",
 
         -- js, html etc
-        "prettier"
+        "prettier",
+        "emmet-language-server"
       },
     },
   },

@@ -29,6 +29,10 @@ vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
     }
   }
 }
- M.ui = {theme = 'catppuccin'}
+
+-- Treat ejs files as html files
+vim.cmd('autocmd BufNewFile,BufRead *.ejs set filetype=html')
+
+ M.ui = {theme = 'chadracula'}
  M.plugins = "custom.plugins"
  return M
