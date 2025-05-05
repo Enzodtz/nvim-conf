@@ -33,6 +33,13 @@ vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
 -- Treat ejs files as html files
 vim.cmd('autocmd BufNewFile,BufRead *.ejs set filetype=html')
 
- M.ui = {theme = 'chadracula'}
+-- Sort diagnostics
+vim.diagnostic.config({
+  severity_sort = true,
+})
+
+
+
+ M.ui = {theme = 'catppuccin'}
  M.plugins = "custom.plugins"
  return M

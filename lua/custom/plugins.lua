@@ -10,11 +10,8 @@ local plugins = {
         "gopls",
 
         -- python
-        "pyright",
         "basedpyright",
-        "mypy",
         "ruff",
-        "black",
 
         -- typescript
         "typescript-language-server",
@@ -86,7 +83,7 @@ local plugins = {
     lazy = false
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     event = "VeryLazy",
     ft = {"python", "c", "h"},
     opts = function()
