@@ -38,8 +38,9 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 
-
-
- M.ui = {theme = 'catppuccin'}
+ M.ui = {
+  theme = 'catppuccin',
+  transparency = true,
+}
  M.plugins = "custom.plugins"
  return M
