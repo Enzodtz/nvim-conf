@@ -10,7 +10,7 @@ local plugins = {
         "gopls",
 
         -- python
-        "basedpyright",
+        "pyright",
         "ruff",
 
         -- typescript

@@ -26,7 +26,7 @@ lspconfig.clangd.setup {
   capabilities = capabilities,
 }
 
-lspconfig.basedpyright.setup {
+lspconfig.pyright.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
@@ -69,4 +69,12 @@ lspconfig.html.setup {
   capabilities = capabilities,
 }
 
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+
+local virtual_text_enabled = true
+local function toggle_virtual_text()
+  virtual_text_enabled = not virtual_text_enabled
+  vim.diagnostic.config({ virtual_text = virtual_text_enabled })
+end
+
+vim.keymap.set('n', '<leader>tt', toggle_virtual_text)
