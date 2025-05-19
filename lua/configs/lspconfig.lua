@@ -6,5 +6,8 @@ local servers = {
 
   -- rust
   "rust_analyzer",
+
+  -- python
+  "pyright",
 }
 vim.lsp.enable(servers)
