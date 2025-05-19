@@ -42,7 +42,12 @@ return {
         "<leader>a",
         function()
           local harpoon = require "harpoon"
-          harpoon.ui:toggle_quick_menu(harpoon:list())
+          harpoon.ui:toggle_quick_menu(harpoon:list(), {
+            border = "rounded",
+            title_pos = "center",
+            title = { { " Harpoon ", "LazyH1" } },
+          })
+          vim.wo[harpoon.ui.win_id].signcolumn = "yes:1"
         end,
         desc = "Harpoon quick menu",
       },
