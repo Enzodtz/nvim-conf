@@ -9,5 +9,8 @@ local servers = {
 
   -- python
   "pyright",
+
+  -- markdown
+  "marksman",
 }
 vim.lsp.enable(servers)
