@@ -3,8 +3,9 @@ local options = {
     lua = { "stylua" },
     rust = { "rustfmt" },
     python = { "ruff_format" },
-    -- css = { "prettier" },
-    -- html = { "prettier" },
+    css = { "prettier" },
+    html = { "prettier" },
+    js = { "prettier" },
     markdown = { "prettier" },
   },
 

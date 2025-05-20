@@ -12,5 +12,8 @@ local servers = {
 
   -- markdown
   "marksman",
+
+  -- javascript
+  "ts_ls",
 }
 vim.lsp.enable(servers)
