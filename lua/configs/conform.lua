@@ -5,7 +5,9 @@ local options = {
     python = { "ruff_format" },
     css = { "prettier" },
     html = { "prettier" },
-    js = { "prettier" },
+    javascript = { "prettier" },
+    typescript = { "prettier" },
+    typescriptreact = { "prettier" },
     markdown = { "prettier" },
   },
 
