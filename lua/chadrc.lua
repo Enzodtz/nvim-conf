@@ -19,4 +19,9 @@ M.ui = {
   },
 }
 
+-- Sort diagnostics
+vim.diagnostic.config {
+  severity_sort = true,
+}
+
 return M
