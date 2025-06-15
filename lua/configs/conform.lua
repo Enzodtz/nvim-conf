@@ -9,6 +9,7 @@ local options = {
     typescript = { "prettierd", lsp_fallback = false },
     typescriptreact = { "prettierd" },
     markdown = { "prettierd" },
+    cpp = { "clang-format" },
   },
 
   format_on_save = {

@@ -15,5 +15,8 @@ local servers = {
 
   -- javascript
   "ts_ls",
+
+  -- c / cpp
+  "clangd",
 }
 vim.lsp.enable(servers)
