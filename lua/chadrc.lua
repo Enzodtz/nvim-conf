@@ -16,6 +16,7 @@ M.ui = {
   statusline = {
     -- enabled = false,
     theme = "vscode",
+    -- TODO: add search count
   },
 }
 
