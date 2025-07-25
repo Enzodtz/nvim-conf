@@ -20,6 +20,8 @@ map("n", "<leader>ca", function()
   vim.lsp.buf.code_action()
 end, { desc = "LSP code action" })
 
+map("n", "<C-p>", "<C-i>", { noremap = true, desc = "Jump forward in jumplist" })
+
 -- Tab to indent
 map("n", "<Tab>", ">>", { noremap = true, silent = true, desc = "Indent" })
 map("v", "<Tab>", ">gv", { noremap = true, silent = true, desc = "Indent" })
