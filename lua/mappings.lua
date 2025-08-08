@@ -52,3 +52,29 @@ map("n", "<leader>dr", dap.restart, { desc = "DAP Restart" })
 map("n", "<leader>tt", function()
   require("base46").toggle_transparency()
 end, { desc = "Toggle transparency" })
+
+-- Harpoon
+map("n", "<leader>a", function()
+  require("harpoon"):list():select(1)
+end, { desc = "Harpoon to file 1" })
+map("n", "<leader>A", function()
+  require("harpoon"):list():replace_at(1)
+end, { desc = "Harpoon insert into file 1" })
+map("n", "<leader>s", function()
+  require("harpoon"):list():select(1)
+end, { desc = "Harpoon to file 2" })
+map("n", "<leader>S", function()
+  require("harpoon"):list():replace_at(1)
+end, { desc = "Harpoon insert into file 2" })
+-- map("n", "<leader>A", function()
+--   require("harpoon"):list():add()
+-- end, { desc = "Harpoon file" })
+-- map("n", "<leader>a", function()
+--   local harpoon = require "harpoon"
+--   harpoon.ui:toggle_quick_menu(harpoon:list(), {
+--     border = "rounded",
+--     title_pos = "center",
+--     title = { { " Harpoon ", "LazyH1" } },
+--   })
+--   vim.wo[harpoon.ui.win_id].signcolumn = "yes:1"
+-- end, { desc = "Harpoon quick menu" })
