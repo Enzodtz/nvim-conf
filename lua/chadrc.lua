@@ -19,6 +19,9 @@ M.ui = {
     theme = "vscode",
     -- TODO: add search count
   },
+  telescope = {
+    style = "bordered",
+  },
 }
 
 -- Sort diagnostics
