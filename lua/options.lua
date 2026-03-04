@@ -42,3 +42,10 @@ opt.formatoptions:remove "o"
 opt.shada = { "'10", "<0", "s10", "h" }
 
 opt.inccommand = "split"
+
+-- filetypes
+vim.filetype.add {
+  extension = {
+    ejs = "html",
+  },
+}
