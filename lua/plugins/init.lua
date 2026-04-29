@@ -47,7 +47,14 @@ return {
   },
 
   -- test new blink
-  { import = "nvchad.blink.lazyspec" },
+  {
+    import = "nvchad.blink.lazyspec",
+    opts = {
+      keymap = {
+        ["<Tab>"] = { "fallback" },
+      },
+    },
+  },
 
   {
     "nvim-treesitter/nvim-treesitter",
@@ -104,5 +111,17 @@ return {
       dap_python.setup(path)
       dap_python.test_runner = "pytest"
     end,
+  },
+  {
+    "saghen/blink.cmp",
+    opts = {
+      keymap = {
+        ["<Tab>"] = { "fallback" },
+      },
+    },
+  },
+  {
+    "github/copilot.vim",
+    lazy = false,
   },
 }
