@@ -123,5 +123,10 @@ return {
   {
     "github/copilot.vim",
     lazy = false,
+    config = function()
+      vim.g.copilot_filetypes = {
+        rust = false,
+      }
+    end,
   },
 }
